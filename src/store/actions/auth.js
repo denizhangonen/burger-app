@@ -23,9 +23,7 @@ export const authStart = () => {
 };
 
 export const logout = () => {
-  // localStorage.removeItem("token");
-  // localStorage.removeItem("expirationDate");
-  // localStorage.removeItem("userId");
+  // call saga for side effects
   return {
     type: actionTypes.AUTH_INITIATE_LOGOUT
   };
