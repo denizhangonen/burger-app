@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import * as actions from "../../store/actions/index";
 
 //Components
-import Aux from "../../hoc/Aux/Aux";
+import AuxW from "../../hoc/AuxW/AuxW";
 
 import Burger from "../../components/Burger/Burger";
 import BuildControls from "../../components/Burger/BuildControls/BuildControls";
@@ -99,7 +99,7 @@ class BurgerBuilder extends Component {
 
     if (this.props.ings) {
       burger = (
-        <Aux>
+        <AuxW>
           <Burger ingredients={this.props.ings} />
           <BuildControls
             ingredientAdded={this.props.onIngredientAdded}
@@ -110,7 +110,7 @@ class BurgerBuilder extends Component {
             purchasing={this.purchaseHandler}
             isAuth={this.props.isAuthenticated}
           />
-        </Aux>
+        </AuxW>
       );
 
       orderSummnary = (
@@ -124,7 +124,7 @@ class BurgerBuilder extends Component {
     }
 
     return (
-      <Aux>
+      <AuxW>
         <Modal
           show={this.state.purchasing}
           modalClosed={this.purchaseCancelHandler}
@@ -132,7 +132,7 @@ class BurgerBuilder extends Component {
           {orderSummnary}
         </Modal>
         {burger}
-      </Aux>
+      </AuxW>
     );
   }
 }

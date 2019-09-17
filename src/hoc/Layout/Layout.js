@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 //Components
-import Aux from "../Aux/Aux";
+import AuxW from "../AuxW/AuxW";
 import Toolbar from "../../components/Navigation/Toolbar/Toolbar";
 import SideDrawer from "../../components/Navigation/SideDrawer/SideDrawer";
 
@@ -26,7 +26,7 @@ class Layout extends Component {
 
   render() {
     return (
-      <Aux>
+      <AuxW>
         <Toolbar
           isAuth={this.props.isAuthenticated}
           drawerToggleClicked={this.sideDrawerToggleHandler}
@@ -37,7 +37,7 @@ class Layout extends Component {
           closed={this.sideDrawerClosedHandler}
         />
         <main className={classes.Content}>{this.props.children}</main>
-      </Aux>
+      </AuxW>
     );
   }
 }
