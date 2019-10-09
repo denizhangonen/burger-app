@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/denizhangonen/burger-app.git/precache-manifest.46d6eafff710abbfa6adf561144df25a.js"
+  "/burger-app/precache-manifest.c8ae85dbe07d87edfd1f21083169bcbe.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/denizhangonen/burger-app.git/index.html", {
+workbox.routing.registerNavigationRoute("/burger-app/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
